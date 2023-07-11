@@ -19,5 +19,8 @@
   "homepage": "https://github.com/FRIASMIGUEL/exercicio12#readme",
   "devDependencies": {
     "cypress": "^12.17.1"
+  },
+  "dependencies": {
+    "faker": "^5.5.3"
   }
 }
