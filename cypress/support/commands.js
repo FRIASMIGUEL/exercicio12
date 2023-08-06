@@ -32,17 +32,27 @@ cy.get('.woocommerce-form > .button').click()
 })
 
 
-Cypress.Commands.add('preCadastro', (email, senha, nome, sobrenome) =>{
+Cypress.Commands.add('addPedido', (Nome, Sobrenome,compania,endereço1,endereço2, Cidade,CEP, Telefone, ) =>{
 
-    cy.get('#reg_email').type(email)
-    cy.get('#reg_password').type(senha)
-    cy.get(':nth-child(4) > .button').click()
+    cy.get('#billing_first_name').type(Nome)
 
+    cy.get('#billing_last_name').type(Sobrenome)
+        
+    cy.get('#billing_company').clear().type(compania)
 
-    cy.get('.woocommerce-MyAccount-navigation-link--edit-account > a').click()
-    cy.get('#account_first_name').type(nome)
-    cy.get('#account_last_name').type(sobrenome)
-    cy.get('.woocommerce-Button').click()
+    cy.get('#billing_address_1').type(endereço1)
+    
+    cy.get('#billing_address_2').type(endereço2)
+    
+    cy.get('#billing_city').type(Cidade)
+
+  
+        cy.get('#billing_postcode').type(CEP)
+    
+        cy.get('#billing_phone').type(Telefone)
+        
+        
+
 
 
 })
