@@ -78,6 +78,9 @@ it('teste e2e, login até confirmação da ordem de compra', () => {
     cy.get('#place_order').click({ force: true })
 
 
+ 
+    
+    cy.get('.woocommerce-notice').should('contain', 'Obrigado.') 
 
 
 
